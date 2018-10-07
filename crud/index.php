@@ -16,15 +16,17 @@ if(isset($_POST['login']))
        }
    else
        {
-        $query = $pdo->prepare("SELECT name, password FROM user_info WHERE name=? AND password=? ");
+        $query = $pdo->prepare("SELECT name, password,user_id FROM user_info WHERE name=? AND password=? ");
         $query->execute(array($user,$pass));
-        $row = $query->fetch(PDO::FETCH_BOTH);
+        $row = $query->fetch(PDO::FETCH_ASSOC);
+	
 
         if($query->rowCount() > 0) 
        		{
 		
   		$_SESSION['name'] = $user;
-  		header('Location:start.php?user=".urlencode($user)');
+	
+  		header('Location:start.php?');
        		}
         else
        		{

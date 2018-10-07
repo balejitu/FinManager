@@ -31,9 +31,32 @@ if ( isset($_SESSION['success']) )
  }
 
 echo('<table border="1">'."\n");
+$user_id_unique = $_SESSION['key'];
 
-$stmt = $pdo->query("SELECT acc_id, acc_name, acc_type, user_id FROM account");
+echo "<tr><td>";
 
+      echo('acc_id');
+ 
+      echo("</td><td>");
+  
+    echo('acc_name');
+ 
+      echo("</td><td>");
+
+      echo('acc_type');
+  
+      echo("</td><td>");
+
+      echo('user_id');
+  
+      echo("</td><td>");
+      echo('curr_balance');
+      echo("</td><td>");
+
+$stmt = $pdo->prepare("SELECT acc_id, acc_name, acc_type, curr_balance FROM account Where account.user_id = :ll");
+
+$stmt->bindValue(':ll',$user_id_unique);
+$stmt->execute();
 while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) )
  {
     echo "<tr><td>";
@@ -50,8 +73,10 @@ while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) )
   
       echo("</td><td>");
 
-      echo(htmlentities($row['user_id']));
+      echo(htmlentities($user_id_unique));
   
+      echo("</td><td>");
+      echo(htmlentities($row['curr_balance']));
       echo("</td><td>");
       echo('<a href="edit_account_info.php?acc_id='.$row['acc_id'].'">Edit</a> / ');
 
@@ -61,6 +86,7 @@ while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) )
 }
 ?>
 </table>
+      
 <a href="add_account_info.php">Add New</a>
 
 
