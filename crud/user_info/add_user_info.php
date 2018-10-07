@@ -45,7 +45,7 @@ if ( isset($_POST['name']) && isset($_POST['email'])
 ':password' => $_POST['password'],':city' => $_POST['city']));
     $_SESSION['success'] = 'Record Added';
 
-    header( 'Location: index_user_info.php' ) ;
+    header( 'Location: ../index.php' ) ;
 
     return;
 
@@ -77,7 +77,7 @@ if ( isset($_SESSION['error']) )
 <p>City:<input type="text" name = "city"></p>
 <p><input type="submit" value="Add New"/>
 
-<a href="index_user_info.php">Cancel</a>
+<a href="../index.php">Cancel</a>
 </p>
 
 </form>

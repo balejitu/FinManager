@@ -58,7 +58,7 @@ Password: <input type="password" name="password" placeholder="password">
 
 <br/><br/>
 <input type="submit" name="login" value="Login">
-
+<a href="user_info/add_user_info.php">SignUp</a>
 </form>
 
 </html>
