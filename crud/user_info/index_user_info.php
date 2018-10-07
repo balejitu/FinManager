@@ -30,9 +30,10 @@ if ( isset($_SESSION['success']) )
 
  }
 
+
 echo('<table border="1">'."\n");
 
-$stmt = $pdo->query("SELECT name, email, password, user_id,city FROM user_info");
+$stmt = $pdo->query("SELECT name, email, password, user_id,city FROM user_info ");
 
 echo "<tr><td>";
 
@@ -78,7 +79,9 @@ while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) )
 }
 ?>
 </table>
+      
 <a href="add_user_info.php">Add New</a>
+      
 
 
 
