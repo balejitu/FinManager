@@ -23,15 +23,15 @@ if ( isset($_POST['acc_name']) && isset($_POST['acc_type'])
      }
 
 
-     $sql = "INSERT INTO account (acc_name, acc_type, user_id)
+     $sql = "INSERT INTO account (acc_name, acc_type, user_id, curr_balance)
 
-            VALUES (:acc_name, :acc_type, :user_id)";
+            VALUES (:acc_name, :acc_type, :user_id, :curr_balance)";
 
     $stmt = $pdo->prepare($sql);
 
     $stmt->execute(array(
  ':acc_name' => $_POST['acc_name'],':acc_type' => $_POST['acc_type'],
-':user_id' => $_POST['user_id']));
+':user_id' => $_POST['user_id'], ':curr_balance' => $_POST['curr_balance']));
     $_SESSION['success'] = 'Record Added';
 
     header( 'Location: index_account_info.php' ) ;
@@ -63,9 +63,14 @@ if ( isset($_SESSION['error']) )
 <p>UserId:
 <input type="text" name="user_id"></p>
 
+
+<p>Opening_Balance:
+<input type="number" name="curr_balance"></p>
+
+
 <p><input type="submit" value="Add New"/>
 
-<a href="index_account_info.php">Cancel</a>
+<a href="../start.php">Cancel</a>
 </p>
 
 </form>

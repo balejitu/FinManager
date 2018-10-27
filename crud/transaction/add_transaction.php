@@ -23,6 +23,11 @@ if ( isset($_POST['description']) && isset($_POST['type'])
      }
 
 
+
+
+
+
+
       $sql = "INSERT INTO transaction_info (description,type,amount,acc_id)
 
             VALUES (:description, :type, :amount, :acc_id)";
@@ -35,7 +40,7 @@ if ( isset($_POST['description']) && isset($_POST['type'])
     $stmt2=$pdo->prepare($sql2);
     $stmt2->execute(array(':amount' => $_POST['amount'], ':acc_id' => $_POST['acc_id']));
     $stmt->execute(array(
- ':description' => $_POST['description'],':type' => $_POST['type'],
+ ':description' => $_POST['description'], ':type' => $_POST['type'],
 ':amount' => $_POST['amount'],':acc_id' => $_POST['acc_id']));
     $_SESSION['success'] = 'Record Added';
 
@@ -46,6 +51,8 @@ if ( isset($_POST['description']) && isset($_POST['type'])
 }
 
 // Flash pattern
+
+
 
 if ( isset($_SESSION['error']) )
     {
@@ -69,7 +76,7 @@ if ( isset($_SESSION['error']) )
 <p>Amount:<input type="number" name = "amount"></p>
 <p><input type="submit" value="Add New"/>
 
-<a href="index_transaction.php">Cancel</a>
+<a href="../start.php">Cancel</a>
 </p>
 
 </form>

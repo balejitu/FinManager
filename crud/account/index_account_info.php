@@ -82,13 +82,17 @@ while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) )
 
       echo('<a href="delete_account_info.php?acc_id='.$row['acc_id'].'">Delete</a>');
   
-    echo("</td></tr>\n");
-}
-?>
-</table>
-      
-<a href="add_account_info.php">Add New</a>
+    
+      echo("</td></tr>\n");
 
+}
+
+?>
+
+</table>
+
+<a href="add_account_info.php">Add New</a>
+<a href="../start.php">Go Back</a>
 
 
 

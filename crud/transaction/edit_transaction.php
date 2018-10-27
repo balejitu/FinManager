@@ -31,7 +31,7 @@ if ( isset($_POST['description']) && isset($_POST['type']) && isset($_POST['amou
                where account.acc_id = :acc_id";
     $stmt2=$pdo->prepare($sql2);
     $stmt2->execute(array(':amount' => $_POST['amount'], ':acc_id' => $_POST['acc_id']));
-
+	echo("ghhg");
       $sql = "UPDATE transaction_info SET description = :description, type = :type, acc_id = :acc_id, amount = :amount WHERE trans_id = :trans_id";
 
 
