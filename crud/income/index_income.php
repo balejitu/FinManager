@@ -1,4 +1,3 @@
-
 <?php
 require_once "pdo.php";
 session_start();
@@ -21,12 +20,9 @@ if ( isset($_SESSION['success']) )
       unset($_SESSION['success']);
  }
 echo('<table border="1">'."\n");
-$user_id_unique = $_SESSION['key'];
-
-$stmt = $pdo->query("SELECT trans_id, description, creation_time, type,amount, acc_id FROM transaction_info where transaction_info.acc_id = any (select acc_id from account where account.user_id = '$user_id_unique')");
-$stmt->bindValue(':mm', $user_id_unique);
+$stmt = $pdo->query("SELECT trans_id, description, creation_time, type,amount, acc_id FROM transaction_info ");
 echo "<tr><td>";
-echo('acc_id');
+ 
 echo "</td><td>";
 echo('description');
 echo "</td><td>";

@@ -26,6 +26,7 @@ $_SESSION['key'] = $pp;
 </br></br><a href="transaction/index_transaction.php">Transaction_info</a>
 </br></br><a href="account/add_account_info.php">Add new account</a>
 </br></br><a href="transaction/add_transaction.php">Add new transaction</a>
+</br></br><a href="income/add_income.php">Add Income</a>
 </br></br><a href="index.php">Sign out</a>
 </body>
 </html>
