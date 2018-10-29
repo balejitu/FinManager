@@ -1,14 +1,13 @@
-# FinManager
-**Financial Management System**</br>
-**INTRODUCTION**</br>
+<h1>FinManager</h1>
+<h2>Financial Management System**</h2>
+<h3>INTRODUCTION</h3>
+<body>
 This project deals with designing and implementing a system for handling the transactions for various accounts of a user . The user logins into the system and enters the details of the accounts he wants to track. He can edit or delete any account. Then he can add transactions related to any account. The transactions will be displayed with the respective account number and the account balance will be updated. Each transactions contains a description and transaction type attribute. The user can also edit and delete any transaction as required.
+</body>
 
-E R Diagram 
-
-
-**TECHNICAL ASPECTS**</br>
+<h3>TECHNICAL ASPECTS</h3>
 The application was developed using the WAMP approach, i.e. Windows, Apache, MySQL and PHP.
-WINDOWS
+<h4>WINDOWS</h4>
 The project was developed in a Windows environment using Dreamweaver and Netbeans but is now
 hosted in a Linux environment on the CISE servers. This was possible due to the high level of portability of php code.
 PHP
