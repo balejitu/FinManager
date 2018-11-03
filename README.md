@@ -33,10 +33,10 @@ As described before the database is in 1st normal form. Also all the non-key att
 
 <h5>PROCESS FLOW</h5>
 The process flow implemented is as follows:
-> The User logins into the system or creates or signs up if he does not have any account.</br>
-> Then the user can add/manage multiple accounts and add new transactions.
-> To add a new account the user will have to provide the Account_Name, Account_type, User_ID and the opening balance
-> Similarly the user can also add/edit transactions by specifying the Description, Amount, Type and the Account_ID.
-> The transactions table and the balance in the corresponding account will automatically update.
-> The user can also add income transactions and they will be saved just liked expense transactions.
-> The user can logout and login again anytime.
+1. The User logins into the system or creates or signs up if he does not have any account.
+2. Then the user can add/manage multiple accounts and add new transactions.
+3. To add a new account the user will have to provide the Account_Name, Account_type, User_ID and the opening balance
+4. Similarly the user can also add/edit transactions by specifying the Description, Amount, Type and the Account_ID.
+5. The transactions table and the balance in the corresponding account will automatically update.
+6. The user can also add income transactions and they will be saved just liked expense transactions.
+7. The user can logout and login again anytime.
