@@ -10,28 +10,28 @@ The application was developed using the WAMP approach, i.e. Windows, Apache, MyS
 <h4>WINDOWS</h4>
 The project was developed in a Windows environment using Dreamweaver and Netbeans but is now
 hosted in a Linux environment on the CISE servers. This was possible due to the high level of portability of php code.
-<h5>PHP</h5>
+<h3>PHP</h3>
 PHP is a widely-used general-purpose scripting language that is especially suited for Web development
 and can be embedded into HTML. All server side code was written in php. As mentioned the design was done in Windows in a WAMP environment and then the code was ported and hosted on Apache in
 Linux.
-<h6>APACHE</h6>
+<h3>APACHE</h3>
 The web server used is Apache with the php plugin. Apache again is a very reliable web server on both
 Windows and Linux and also maintains a very similar interface in both.
-<h7>MySQL</h7>
+<h3>MySQL</h3>
 The database system used is MySQL which is an open source RDBMS. It is very light and highly
 functional. Also with php and MySQL being used together very frequently a lot of online support was available
 	
-<h8>Normalization</h8>
-<h9>1st normal form</h9>
+<h3>Normalization</h3>
+<h3>1st normal form</h3>
 For every entity the domain of every attribute is atomic and there exists a primary key that uniquely identifies a tuple..
 The domain of each attribute contains only atomic (indivisible) values, and the value of each attribute contains only a single value from that domain
 Hence the given database is in first normal form
 
-<h9>2nd Normal Form</h9>
+<h3>2nd Normal Form</h3>
 For a database to be in 2nd normal form, it must be in 1st normal form and also all of the non-key attributes must be describing the candidate key/keys.
 As described before the database is in 1st normal form. Also all the non-key attributes are describing the candidate key in case of each entity set. Hence the database is in 2nd normal form.
 
-<h11>PROCESS FLOW</h11>
+<h3>PROCESS FLOW</h3>
 The process flow implemented is as follows:
 > The User logins into the system or creates or signs up if he does not have any account.
 
