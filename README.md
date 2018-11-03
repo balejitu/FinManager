@@ -33,7 +33,7 @@ As described before the database is in 1st normal form. Also all the non-key att
 
 <h5>PROCESS FLOW</h5>
 The process flow implemented is as follows:
-> The User logins into the system or creates or signs up if he does not have any account.
+> The User logins into the system or creates or signs up if he does not have any account.</br>
 > Then the user can add/manage multiple accounts and add new transactions.
 > To add a new account the user will have to provide the Account_Name, Account_type, User_ID and the opening balance
 > Similarly the user can also add/edit transactions by specifying the Description, Amount, Type and the Account_ID.
